@@ -12,7 +12,7 @@ html, body {
 :root {
     --menu-chart-width: 250px;
     --menu-chart-height: 90%;
-    --nav-width: 100%;
+    --nav-width: 100vh;
     --nav-height: 10%;
 }
 
