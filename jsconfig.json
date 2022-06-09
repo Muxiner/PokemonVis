@@ -1,0 +1,9 @@
+{
+    "exclude": ["node_modules"],
+    "typeAcquisition": {
+        "include": [
+            "d3",
+            "jQurey"
+        ]
+    }
+}

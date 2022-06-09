@@ -9,40 +9,29 @@
 
 <body>
     <!-- built files will be auto injected -->
-    <div class="nav"></div>
-    <div class="menu"></div>
+    <div class="nav">
+        <div class="nav-item">
+            <button class="btn">Hover Me</button>
+        </div>
+        <div class="nav-item">
+            <button class="btn">Hover Me</button>
+        </div>
+        <div class="nav-item">
+            <button class="btn">Hover Me</button>
+        </div>
+        <div class="nav-item">
+            <button class="btn">Hover Me</button>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu-item">1</div>
+        <div class="menu-item">1</div>
+        <div class="menu-item">1</div>
+    </div>
     <div class="vis-chart"></div>
     <!-- <script src="./js/d3.js"></script> -->
-    <script type="text/javascript" src="./js/d3.min.js"></script>
+    <script type="text/javascript" src="./js/d3.js"></script>
     <script type="text/javascript" src="./js/jQuery.js"></script>
-    <script type="text/javascript">
-        let dataset = '';
-
-        const dimensions = {
-            margin: {
-                top: 30,
-                right: 30,
-                bottom: 30,
-                left: 30 
-            }
-        };
-        dimensions.width = (window.innerWidth - dimensions.margin.left - dimensions.margin.right) * 0.95
-        dimensions.boundedWidth = (window.innerWidth - dimensions.margin.left - dimensions.margin.right)
-        dimensions.height = (window.innerHeight - dimensions.margin.top - dimensions.margin.bottom) * 0.95
-        dimensions.boundedHeight = (window.innerHeight - dimensions.margin.top - dimensions.margin.bottom)
-        Promise.all([
-            d3.csv("./data/pokemon.csv", d => d),
-            d3.csv("./data/moves.csv", d => d),
-            d3.csv("./data/evolution.csv", d => d),
-            d3.csv("./data/typechart.csv", d => d)
-        ]).then(data => dataset = data)
-          .then(() => makeVisualization)
-        
-        function makeVisualization()
-        {
-
-        }
-    </script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
-
 </html>

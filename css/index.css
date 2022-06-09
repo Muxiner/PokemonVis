@@ -3,34 +3,90 @@
     padding: 0px;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
 }
 
 :root {
-    --menu-chart-width: 250px;
-    --menu-chart-height: 90%;
-    --nav-width: 100vh;
-    --nav-height: 10%;
+    --menu-chart-width: 15vw;
+    --menu-chart-height: calc(100vh - var(--nav-height));
+    --nav-width: 100vw;
+    --nav-height: 100px;
 }
 
-.nav{
+.nav {
     width: var(--nav-width);
     height: var(--nav-height);
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: blueviolet;
 }
 
+.nav-item {
+    width: calc(var(--nav-width) / 5);
+    height: calc(var(--nav-height) * 0.8);
+    margin: calc(var(--nav-height) * 0.1);
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e47979;
+}
+
 .menu {
-    float:left;
+    float: left;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: var(--menu-chart-width);
     height: var(--menu-chart-height);
     background-color: aquamarine;
 }
 
+.menu-item {
+    width: calc(var(--menu-chart-width) * 0.8);
+    height: calc(var(--menu-chart-height) / 5);
+    margin: calc(var(--menu-chart-width) * 0.1);
+    background-color: #ae5353;
+}
+
 .vis-chart {
     margin-left: var(--menu-chart-width);
     height: var(--menu-chart-height);
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* 按钮 */
+.btn {
+    width: 170px;
+    height: 60px;
+    font-size: 18px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s;
+   }
+   
+   .btn:hover {
+    box-shadow: inset 0 0 0 4px #ef476f, 
+                 inset 0 0 0 8px #ffd166, 
+                 inset 0 0 0 12px #06d6a0,
+                 inset 0 0 0 16px #118ab2;
+    background: #073b4c;
+    color: #fff;
+   }
