@@ -1,0 +1,75 @@
+.clearAllpokemon {
+    width: 145px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.clearAllpokemon:hover {
+    background-color: #ff6458;
+}
+
+.clearAllpokemon:active {
+    background-color: #470500;
+    color: #fff;
+}
+
+.clearAllpokemon:disabled {
+    background-color: #7a0900;
+}
+
+.add-all {
+    width: 145px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(191, 248, 142);
+}
+
+.add-all:hover {
+    background-color: #a5f1aafd;
+}
+
+.add-all:active {
+    background-color: #52f50072;
+    color: #fff;
+}
+
+.add-all:disabled {
+    background-color: #7a0900;
+}
+
+.remove-all {
+    width: 145px;
+    height: 40px;
+    margin: 5px 0;
+    text-align: center;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.remove-all:hover {
+    background-color: #ff6458;
+}
+
+.remove-all:active {
+    background-color: #470500;
+    color: #fff;
+}
+
+.remove-all:disabled {
+    background-color: #7a0900;
+}

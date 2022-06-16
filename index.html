@@ -4,34 +4,79 @@
 <head>
     <meta charset="utf-8">
     <title>Pokemon</title>
-    <link rel="stylesheet"  href="./css/index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+    <link rel="stylesheet" href="./css/switch.css" />
+    <link rel="stylesheet" href="./css/plot.css" />
+    <link rel="stylesheet" href="./css/autocomplete.css" />
 </head>
 
 <body>
     <!-- built files will be auto injected -->
     <div class="nav">
         <div class="nav-item">
-            <button class="btn">Hover Me</button>
+            <button class="btn" onclick="window.location.href='./index.html'">能力散点图</button>
         </div>
         <div class="nav-item">
-            <button class="btn">Hover Me</button>
+            <button class="btn" onclick="window.location.href='./kezhi.html'">能力系克制关系</button>
         </div>
         <div class="nav-item">
-            <button class="btn">Hover Me</button>
-        </div>
-        <div class="nav-item">
-            <button class="btn">Hover Me</button>
+            <button class="btn" onclick="window.location.href='./bingtu.html'">宝可梦数量饼图</button>
         </div>
     </div>
-    <div class="menu">
-        <div class="menu-item">1</div>
-        <div class="menu-item">1</div>
-        <div class="menu-item">1</div>
+
+    <div class="menu" onclick="updateData()">
+        <div class="menu-item">
+            <h3>探索</h3>
+            <p>Search for a Pokemon (Examples: Bulbasaur, Pikachu, Charizard, ...)
+            </p>
+            <div class="input-group">
+                <input type="text" class="input" id="autocomplete" />
+                <input class="button--submit" value="Add" type="submit" onclick="searchAddPokemon()">
+            </div>
+            <div class="select-pokemon">
+            </div>
+            <div class="remove-pokemon">
+                <div class="clearAllpokemon" onclick="removePokemon()">
+                    Clear All
+                </div>
+            </div>
+            <div claas="select-XAxis">
+                <p>Update X-Axis:</p>
+                <select class="dd-button" id="x-axis">
+                    <option value="none" selected>Chose an X-Axis</option>
+                </select>
+            </div>
+
+            <div claas="select-YAxis">
+                <p>Update Y-Axis:</p>
+                <select class="dd-button" id="y-axis">
+                    <option value="none" selected>Chose an Y-Axis</option>
+                </select>
+            </div>
+            <div class="select-type">
+                <p>Filter Pokemon Types</p>
+                <div class="add-all" onclick="addAllTypes()">Add all</div>
+                <div class="remove-all" onclick="removeAllTypes()">Remove all</div>
+                <div class="all-type">
+                </div>
+            </div>
+        </div>
     </div>
     <div class="vis-chart"></div>
     <!-- <script src="./js/d3.js"></script> -->
     <script type="text/javascript" src="./js/d3.js"></script>
+    <!-- <script type="text/javascript" src="./js/d3.min.js"></script> -->
+    <!-- <script type="text/javascript" src="./js/d3-selection.v1.min.js"></script> -->
     <script type="text/javascript" src="./js/jQuery.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/autocomplete.js"></script>
+
+    <script type="text/javascript" src="./js/color.js"></script>
+    <script type="text/javascript" src="./js/plot.js"></script>
+    <script type="text/javascript" src="./js/restraint.js"></script>
+
 </body>
+
 </html>

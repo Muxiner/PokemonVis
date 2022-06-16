@@ -1,0 +1,99 @@
+/* 整体 */
+body {
+    font: 16px 'Century Gothic', Futura, sans-serif;
+    margin: 0px;
+  }
+
+#TypeIndexSingle {
+    padding: 28px;
+    background: rgb(255, 248, 240);
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 500px;
+  }
+
+  #TypeIndexSingle td {
+    text-align: center;
+  }
+
+  /* TypeLabel */
+  #TypeIndexSingle .TypeLabel {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    padding: 1px;
+    border-radius: 10%;
+    color: white;
+    background: rgb(98, 152, 135);
+  }
+
+  /* TypeTitle */
+  #TypeIndexSingle .TypeTitle {
+    border-collapse: collapse;
+    display: inline-block;
+    background: lightgray;
+    padding: 1px 5px;
+  }
+
+  #TypeIndexSingle .TypeTitle td {
+    font-size: 12px;
+    width: 30px;
+    height: 28px;
+    text-align: center;
+  }
+
+  /* TypeTitle input */
+  #TypeIndexSingle .TypeTitle input {
+    display: none;
+  }
+
+  #TypeIndexSingle .TypeTitle input:checked+label {
+    outline: 5px solid white;
+  }
+
+  /* TypeShow */
+  #TypeIndexSingle .TypeShow {
+    cursor: default;
+    border-collapse: collapse;
+    display: inline-block;
+  }
+
+  #TypeIndexSingle .TypeShow td {
+    width: 64px;
+    height: 42px;
+    border: 1px solid rgb(0, 128, 0);
+    background: aliceblue;
+  }
+
+  #TypeIndexSingle .TypeShow .blank {
+    background: white
+  }
+
+  #TypeIndexSingle .TypeShow .effZero {
+    background: lightblue;
+  }
+
+  #TypeIndexSingle .TypeShow .effHalf {
+    background: OldLace
+  }
+
+  #TypeIndexSingle .TypeShow .effNormal {
+    background: PeachPuff
+  }
+
+  #TypeIndexSingle .TypeShow .effDouble {
+    background: Salmon
+  }
+
+  #TypeIndexSingle .TypeShow .yLine {
+    border-right: 2px solid green
+  }
+
+  #TypeIndexSingle .TypeShow .xLine {
+    border-top: 2px solid green
+  }
